@@ -21,11 +21,10 @@ targets: [
 ]
 ```
 
-inside Dependecies directory execute code from generate-xcodeproj.rb for regenerate Dependencies.xcodeproj file and update your dependencies
+inside root prodject directory execute this command for regenerate Dependencies.xcodeproj file and update your dependencies
 
 ```bash
-cd ./Dependecies
-./generate-xcodeproj.rb
+cd ./Dependencies && ./generate-xcodeproj.rb && cd ../
 ```
 
 it is all, you can build your project with Alamofire ...
