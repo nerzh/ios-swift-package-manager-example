@@ -21,7 +21,7 @@ targets: [
 ]
 ```
 
-inside root prodject directory execute this command for regenerate Dependencies.xcodeproj file and update your dependencies
+inside root directory of your project execute this command for regenerate Dependencies.xcodeproj file and update your dependencies
 
 ```bash
 cd ./Dependencies && ./generate-xcodeproj.rb && cd ../
