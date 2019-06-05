@@ -1,7 +1,7 @@
 # Manage iOS dependencies with swift package manager - example
 
 
-### file /Dependecies/Package.swift
+#### 1. file /Dependecies/Package.swift
 
 add your dependency
 
@@ -11,7 +11,7 @@ dependencies: [
     .package(url: "https://github.com/OtherLibrary/OtherLibrary.git", from: "1.0.0")
 ]
 ```
-add target of your dependency to the dependencies array
+add targets "Alamofire" and "OtherLibrary" of your dependency to the dependencies array
 
 ```swift
 targets: [
@@ -22,10 +22,16 @@ targets: [
 ]
 ```
 
-inside root directory of your project execute this command for regenerate Dependencies.xcodeproj file and update your dependencies
+#### 2. inside root directory of your project execute this command for regenerate Dependencies.xcodeproj file and update your dependencies
 
 ```bash
 cd ./Dependencies && ./generate-xcodeproj.rb && cd ../
 ```
+#### 3. imports
+```swift
+import Alamofire
+import OtherLibrary
+```
 
+### after each a change dependencies in file /Dependecies/Package.swift repeat step 2
 it is all, you can build your project with Alamofire and OtherLibrary ...
